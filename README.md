@@ -2,7 +2,12 @@
 
 ## Prisma Commands
 
-`npx prisma generate` to generate the Prisma Client.
+`npx prisma generate` generates the Prisma Client.
+
+Run this command:
+- After installing `@prisma/client` for the first time.
+- After changing your Prisma schema. (Note: migrate commands run it automatically.)
+- After upgrading Prisma.
 
 `npx prisma migrate reset` to reset the database.
 
