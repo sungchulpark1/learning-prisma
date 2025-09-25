@@ -19,12 +19,14 @@ model User {
   email        String   @unique
   passwordHash String
   createdAt    DateTime @default(now())
+  quotes       Quote[]
 }
 
 model Quote {
   id        Int      @id @default(autoincrement())
   text      String
-  author    String
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
   likes     Int      @default(0)
   favorites Int      @default(0)
   createdAt DateTime @default(now())
