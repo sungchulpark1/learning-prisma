@@ -6,7 +6,7 @@
 
 Run this command:
 - After installing `@prisma/client` for the first time.
-- After changing your Prisma schema. (Note: migrate commands run it automatically.)
+- After changing your Prisma schema. (Note: migrate commands run it automatically)
 - After upgrading Prisma.
 
 `npx prisma migrate reset` to reset the database.
