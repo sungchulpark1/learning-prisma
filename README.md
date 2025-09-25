@@ -2,7 +2,7 @@
 
 ## Prisma Commands
 
-`npx prisma dev` to starts a local Prisma Postgres database.
+`npx prisma dev` to start a local Prisma Postgres database.
 
 `npx prisma generate` generates the Prisma Client.
 
