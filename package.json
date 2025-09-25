@@ -7,6 +7,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "dev": "tsx index.ts",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -14,5 +18,9 @@
     "@prisma/extension-accelerate": "^2.0.2",
     "prisma": "^6.16.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
 }
