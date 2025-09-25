@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  // Clear existing users first
+  await prisma.quote.deleteMany();
   await prisma.user.deleteMany();
   
   // Create a new user
@@ -15,7 +15,20 @@ async function main() {
     },
   });
 
+  // Create a quote
+  const newQuote = await prisma.quote.create({
+    data: {
+      text: 'This is a sample quote.',
+      author: {
+        connect: {
+          id: newUser.id,
+        },
+      },
+    },
+  });
+
   console.log('New User:', newUser);
+  console.log('New Quote:', newQuote);
 }
 
 main()
